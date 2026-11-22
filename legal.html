@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% if legal_page == "privacy" %}
+{% set legal_title = "Privacy" %}
+{% else %}
+{% set legal_title = "Terms" %}
+{% endif %}
+{% block title %}{{ legal_title }} | Malta Guinness Ghana concept{% endblock %}
+{% block content %}
+<section class="legal-page section">
+    {% if legal_page == "privacy" %}
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy <em>notice.</em></h1>
+    <p>This independent website concept does not store contact-form submissions. The form is not connected to a customer-service inbox. Do not enter sensitive personal information.</p>
+    <p>Fonts, animation libraries, lifestyle images and the brand mark may load from third-party providers. Their services may receive standard connection data when your browser requests those assets.</p>
+    {% else %}
+    <p class="eyebrow">Terms</p>
+    <h1>Use of this <em>concept site.</em></h1>
+    <p>This is an independent design concept and is not affiliated with or endorsed by Malta Guinness or Guinness Ghana PLC. Brand marks belong to their respective owners.</p>
+    <p>Product images and campaign images are clearly marked where they are placeholders or illustrative stock photography. Product details, availability and nutrition must be confirmed from current local packaging and official brand channels.</p>
+    {% endif %}
+    <a class="btn btn-dark" href="/">Back to home</a>
+</section>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Our Drink | Malta Guinness Ghana{% endblock %}
+{% block content %}
+<section class="product-hero product-hero-editorial">
+    <div class="product-copy reveal">
+        <p class="eyebrow gold">The original malt goodness</p>
+        <h1>Rich malt.<br><em>Refreshingly real.</em></h1>
+        <p>Discover Malta Guinness, a rich-tasting, non-alcoholic malt beverage enjoyed in Ghana and beyond.</p>
+    </div>
+    <div class="product-detail-placeholder product-detail-image reveal">
+        <img src="{{ url_for('static', filename='images/products/malta-guinness-product.png') }}" alt="Official Malta Guinness Ghana bottle campaign artwork from Guinness Ghana PLC">
+        <p>Official campaign artwork · Guinness Ghana PLC</p>
+        <a class="btn btn-primary" href="/contact">Share can or glass imagery</a>
+    </div>
+</section>
+<section class="product-detail-grid section">
+    <div class="product-detail-copy reveal">
+        <p class="eyebrow">Product information</p>
+        <h2>Full of character.<br><em>Made for moments.</em></h2>
+        <p>Malta Guinness is a non-alcoholic malt beverage with a rich, distinctive taste. Product names, recipes, pack sizes and availability can differ by market.</p>
+        <p>We have not listed nutritional values or pack formats here because current Ghana-market packaging was not available to verify them.</p>
+    </div>
+    <div class="product-facts reveal">
+        <div><span>01</span><strong>Rich malt taste</strong></div>
+        <div><span>02</span><strong>Non-alcoholic malt beverage</strong></div>
+        <div><span>03</span><strong>Refer to your pack for ingredients</strong></div>
+        <small>For the most accurate product information, always check the label on your current pack.</small>
+    </div>
+</section>
+<section class="product-formats section" aria-labelledby="formats-title">
+    <div class="section-heading reveal">
+        <p class="eyebrow">Product imagery</p>
+        <h2 id="formats-title">The real pack.<br><em>No made-up labels.</em></h2>
+        <p>The Ghana media library provides the bottle image, and the can photo is supplied from Melcom. An accurate branded-glass photo is still needed.</p>
+    </div>
+    <div class="product-grid">
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-bottle">
+                <img src="{{ url_for('static', filename='images/products/malta-guinness-bottle.png') }}" alt="Malta Guinness bottle, official Ghana product image">
+                <span>Official Ghana product image · Guinness Ghana PLC</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Bottle</p><h3>Malta Guinness</h3></div><span class="product-size">Size not verified</span></div>
+        </article>
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-can">
+                <img src="{{ url_for('static', filename='images/products/malta-guinness-can.jpg') }}" alt="Malta Guinness can product photo supplied from Melcom">
+                <span>Product image source · Melcom</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Can</p><h3>Malta Guinness</h3></div><span class="product-size">Pack to be confirmed</span></div>
+        </article>
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-pending" role="img" aria-label="Official Malta Guinness branded glass image not available">
+                <span class="pending-image-mark" aria-hidden="true">▧</span>
+                <strong>Glass image needed</strong>
+                <span>Official Ghana photo not available</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Serve</p><h3>Malta Guinness</h3></div><span class="product-size">Serve image</span></div>
+        </article>
+    </div>
+    <p class="product-image-note">Can photo: <a href="https://melcom.com/media/catalog/product/cache/d0e1b0d5c74d14bfa9f7dd43ec52d082/d/9/d997a.jpg" target="_blank" rel="noopener noreferrer">Melcom</a>. The glass panel is a placeholder, not a product rendering. <a href="/contact">Send an approved glass photo</a>.</p>
+</section>
+<section class="product-cta section">
+    <p class="eyebrow gold">Ready for your next moment?</p>
+    <h2>Find Malta Guinness<br><em>near you.</em></h2>
+    <a class="btn btn-primary" href="/find-us">Where to find us <span aria-hidden="true">↗</span></a>
+</section>
+{% endblock %}

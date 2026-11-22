@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero" id="home">
+    <div class="hero-noise"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+    <div class="hero-copy">
+        <p class="eyebrow gold">A little more goodness in every moment</p>
+        <h1>UNLEASH<br>THE <em>GOODNESS.</em></h1>
+        <p>Experience the goodness, vitality and refreshing taste of Malta Guinness. Celebrate every moment with a drink that brings people together.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="/our-story">Discover Malta Guinness <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="/products">Explore our products <span>&rarr;</span></a>
+        </div>
+    </div>
+    <div class="hero-product-wrap">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-official-product">
+            <img src="{{ url_for('static', filename='images/products/malta-guinness-product.png') }}" alt="Official Malta Guinness Ghana bottle campaign artwork from Guinness Ghana PLC">
+        </div>
+        <p class="hero-image-note">Official campaign artwork <span>·</span> Guinness Ghana PLC</p>
+    </div>
+    <a class="hero-scroll" href="#story">Scroll to explore <span></span></a>
+</section>
+
+<section class="intro section story-feature" id="story">
+    <div class="intro-image reveal image-frame">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85" alt="Friends sharing an outdoor moment — illustrative stock lifestyle photography, not a Malta Guinness campaign">
+        <span class="photo-credit">Lifestyle image · illustrative stock photography</span>
+    </div>
+    <div class="intro-copy reveal">
+        <p class="eyebrow">Our story · Ghana</p>
+        <h2>Goodness feels<br>better <em>together.</em></h2>
+        <p>Malta Guinness is a rich, refreshing malt drink that has made its way into everyday Ghanaian moments. From a shared laugh to a well-earned pause, the best moments are the ones we enjoy together.</p>
+        <a class="btn btn-dark" href="/our-story">Discover our story <span aria-hidden="true">↗</span></a>
+    </div>
+</section>
+
+<section class="products-section section" id="products">
+    <div class="section-heading reveal">
+        <p class="eyebrow">The Malta Guinness range</p>
+        <h2>Goodness, in its<br><em>own original form.</em></h2>
+        <p>The bottle image is from Guinness Ghana PLC; the can photo was supplied from Melcom. A branded-glass photo is still needed.</p>
+    </div>
+    <div class="product-grid">
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-bottle">
+                <img src="{{ url_for('static', filename='images/products/malta-guinness-bottle.png') }}" alt="Malta Guinness bottle, official Ghana product image">
+                <span>Official Ghana product image · Guinness Ghana PLC</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Bottle</p><h3>Malta Guinness</h3></div><span class="product-size">Size not verified</span></div>
+            <p class="product-description">Official bottle image from Guinness Ghana PLC. Current local pack size should be checked on the label.</p>
+        </article>
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-can">
+                <img src="{{ url_for('static', filename='images/products/malta-guinness-can.jpg') }}" alt="Malta Guinness can product photo supplied from Melcom">
+                <span>Product image source · Melcom</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Can</p><h3>Malta Guinness</h3></div><span class="product-size">Pack to be confirmed</span></div>
+            <p class="product-description">Retailer product photo sourced from Melcom; pack size and current Ghana availability are not independently verified.</p>
+        </article>
+        <article class="product-card reveal">
+            <div class="product-photo-placeholder product-photo-pending" role="img" aria-label="Official Malta Guinness branded glass image not available">
+                <span class="pending-image-mark" aria-hidden="true">▧</span>
+                <strong>Glass image needed</strong>
+                <span>Official Ghana photo not available</span>
+            </div>
+            <div class="product-card-copy"><div><p class="eyebrow">Serve</p><h3>Malta Guinness</h3></div><span class="product-size">Serve image</span></div>
+            <p class="product-description">A branded-glass photo has not been verified. Share an approved image to complete this gallery.</p>
+        </article>
+    </div>
+    <p class="product-image-note">Can photo: <a href="https://melcom.com/media/catalog/product/cache/d0e1b0d5c74d14bfa9f7dd43ec52d082/d/9/d997a.jpg" target="_blank" rel="noopener noreferrer">Melcom</a>. The glass panel is a placeholder, not a product rendering. <a href="/contact">Send an approved glass photo</a>.</p>
+    <div class="center-action"><a class="btn btn-outline" href="/products">Product information <span aria-hidden="true">↗</span></a></div>
+</section>
+
+<section class="serve-section section" id="serving">
+    <div class="serve-copy reveal">
+        <p class="eyebrow gold">A serving moment</p>
+        <h2>Pour a moment<br><em>of goodness.</em></h2>
+        <p>Watch Malta Guinness poured from the bottle into a glass.</p>
+        <p class="serve-credit">Independent serving video by <a href="https://www.youtube.com/watch?v=C4JUKRyCLmI" target="_blank" rel="noopener noreferrer">Ale Degustation</a> — not an official Guinness Ghana campaign.</p>
+    </div>
+    <div class="serve-video-frame reveal" data-video-embed>
+        <button class="serve-video-poster" type="button" data-video-id="C4JUKRyCLmI" aria-label="Play Malta Guinness pouring demonstration by Ale Degustation">
+            <img src="{{ url_for('static', filename='images/products/malta-guinness-product.png') }}" alt="" loading="lazy" decoding="async">
+            <span class="serve-play-icon" aria-hidden="true">▶</span>
+            <span class="serve-poster-caption" aria-hidden="true">Play serving video</span>
+        </button>
+    </div>
+</section>
+
+<section class="goodness-section section" id="goodness">
+    <div class="goodness-copy reveal">
+        <p class="eyebrow gold">The goodness inside</p>
+        <h2>Rich malt.<br><em>Refreshing by nature.</em></h2>
+        <p>Malta Guinness is a non-alcoholic malt beverage, best enjoyed chilled. For ingredients and nutritional details, please check the current label on your pack—formulas can vary by market.</p>
+        <a class="btn btn-primary" href="/products">Explore product details <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="goodness-cards">
+        <article class="goodness-card reveal"><span class="goodness-icon">01</span><p class="eyebrow">Taste</p><h3>Rich malt<br>character</h3><p>A full-bodied malt taste, with its own distinctive character.</p></article>
+        <article class="goodness-card reveal"><span class="goodness-icon">02</span><p class="eyebrow">Refresh</p><h3>Best served<br>chilled</h3><p>Enjoy a refreshing malt moment, straight from the fridge.</p></article>
+        <article class="goodness-card reveal"><span class="goodness-icon">03</span><p class="eyebrow">Know</p><h3>Check your<br>pack label</h3><p>Refer to the product packaging for verified ingredients and nutrition.</p></article>
+    </div>
+</section>
+
+<section class="campaign-section section" id="campaigns">
+    <div class="section-heading reveal">
+        <p class="eyebrow">Moments worth sharing</p>
+        <h2>Life, captured<br><em>in good company.</em></h2>
+        <p>Illustrative stock lifestyle photography. These are not official Malta Guinness campaign images.</p>
+    </div>
+    <div class="campaign-grid">
+        <button class="campaign-image campaign-tall reveal" data-lightbox="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=90" data-caption="Live event atmosphere · illustrative stock photography, not an official campaign">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=85" alt="People gathering at a live event — illustrative stock lifestyle photography">
+            <span>Open image <b>↗</b></span>
+        </button>
+        <button class="campaign-image reveal" data-lightbox="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=90" data-caption="Friends sharing a meal · illustrative stock photography, not an official campaign">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1000&q=85" alt="Friends around a table — illustrative stock lifestyle photography">
+            <span>Open image <b>↗</b></span>
+        </button>
+        <button class="campaign-image reveal" data-lightbox="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=90" data-caption="Friends outdoors · illustrative stock photography, not an official campaign">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1000&q=85" alt="Friends spending time together — illustrative stock lifestyle photography">
+            <span>Open image <b>↗</b></span>
+        </button>
+        <button class="campaign-image reveal" data-lightbox="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1600&q=90" data-caption="Music event · illustrative stock photography, not an official campaign">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=85" alt="Music event lights — illustrative stock lifestyle photography">
+            <span>Open image <b>↗</b></span>
+        </button>
+    </div>
+    <div class="social-note reveal">
+        <span class="social-mark">↗</span>
+        <div><p class="eyebrow">Stay connected</p><h3>Find official brand updates</h3><p>We only link to verified channels. Visit Guinness Ghana PLC for official Malta Guinness news and brand information.</p></div>
+        <a class="btn btn-outline" href="https://www.guinnessghanaplc.com/" target="_blank" rel="noopener noreferrer">Guinness Ghana PLC <span aria-hidden="true">↗</span></a>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div><p class="eyebrow gold">Malta Guinness Ghana</p><h2>Make room<br>for <em>goodness.</em></h2></div>
+    <a class="btn btn-primary" href="/contact">Get in touch <span aria-hidden="true">↗</span></a>
+</section>
+{% endblock %}

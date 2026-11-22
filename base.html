@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#281619">
+    <title>{% block title %}Malta Guinness Ghana{% endblock %}</title>
+    <meta name="description" content="Discover Malta Guinness Ghana: a rich, refreshing malt drink made for moments worth celebrating.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="site-loader" id="siteLoader" aria-label="Loading Malta Guinness">
+        <img src="{{ url_for('static', filename='images/malta-guinness-logo.png') }}" alt="Malta Guinness">
+        <span class="loader-line"></span>
+    </div>
+
+    <header class="site-header" id="header">
+        <a class="logo" href="/" aria-label="Malta Guinness home">
+            <img src="{{ url_for('static', filename='images/malta-guinness-logo.png') }}" alt="Malta Guinness">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav">
+            <a class="{{ 'active' if page == 'home' }}" href="/">Home</a>
+            <a class="{{ 'active' if page == 'story' }}" href="/our-story">Our Story</a>
+            <a class="{{ 'active' if page == 'products' }}" href="/products">Our Products</a>
+            <a href="/#goodness">Goodness</a>
+            <a href="/#campaigns">Campaigns</a>
+            <a class="nav-cta {{ 'active' if page == 'contact' }}" href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="{{ url_for('static', filename='images/malta-guinness-logo.png') }}" alt="Malta Guinness">
+            <div>
+                <strong>Malta Guinness Ghana</strong>
+                <span>Goodness worth sharing.</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/our-story">Our Story</a>
+            <a href="/products">Our Products</a>
+            <a href="/ghana">Made for Ghana</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="footer-social">
+            <span>Find official brand information</span>
+            <a href="https://www.guinnessghanaplc.com/" target="_blank" rel="noopener noreferrer">Guinness Ghana PLC <span aria-hidden="true">↗</span></a>
+            <small>Social account links are not shown because verified Malta Guinness Ghana profiles were not available.</small>
+        </div>
+        <div class="footer-legal">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <span>Independent website concept; not affiliated with or endorsed by Malta Guinness or Guinness Ghana PLC.</span>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Malta Guinness Ghana. Malta Guinness is a trademark of its respective owner.</p>
+            <p>Product details vary by market. Refer to the product packaging.</p>
+        </div>
+    </footer>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Campaign photo viewer" aria-hidden="true" tabindex="-1">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+        <img id="lightboxImage" alt="">
+        <p id="lightboxCaption"></p>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
