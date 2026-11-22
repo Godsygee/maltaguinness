@@ -1,8 +1,25 @@
-from flask import Flask, render_template, request
+from flask import Flask, abort, render_template, request, send_from_directory
 
 
-app = Flask(__name__, static_folder="public", static_url_path="/static")
+app = Flask(__name__, static_folder=None, template_folder=".")
 app.config["TEMPLATES_AUTO_RELOAD"] = True
+
+STATIC_FILES = {
+    "style.css",
+    "main.js",
+    "malta-guinness-bottle.png",
+    "malta-guinness-can.jpg",
+    "malta-guinness-logo.png",
+    "malta-guinness-product.png",
+}
+
+
+@app.route("/static/<path:filename>", endpoint="static")
+def static_files(filename):
+    asset_name = filename.rsplit("/", 1)[-1]
+    if asset_name not in STATIC_FILES:
+        abort(404)
+    return send_from_directory(app.root_path, asset_name)
 
 
 @app.route("/")
@@ -53,4 +70,6 @@ def terms():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", "3000")))
